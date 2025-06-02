@@ -1,6 +1,13 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import {Inter} from "next/font/google";
+import Header from "@/components/Header";
 import "./globals.css";
+
+const inter = Inter({
+  variable: "--font-inter",
+  subsets: ["latin"],
+});
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -25,9 +32,17 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${inter.className}   antialiased`}
       >
-        {children}
+        {/*header*/}
+        <Header />
+        <main className="min-h-screen">{children}</main>
+        {/*footer*/}
+        <footer className="bg-blue-50 py-12">
+          <div className="container mx-auto text-center px-4 text-gray-600">
+            <p>Made with 💖 By Varma</p>
+          </div>
+        </footer>
       </body>
     </html>
   );
