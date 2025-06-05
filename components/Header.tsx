@@ -17,6 +17,8 @@ const Header = () => {
             <Link href='/dashboard' className='text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2'>
               <Button variant={'outline'}><LayoutDashboard size={18}/> <span className='hidden md:inline'>Dashboard</span>
               </Button>
+            </Link>
+            <Link href='/dashboard' className='text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2'>
               <Button className='flex items-center gap-2'><PenBox size={18}/> <span className='hidden md:inline'>Add Transaction</span>
               </Button>
             </Link>
