@@ -3,6 +3,7 @@ import { getAccountWithTransactions } from "@/actions/account";
 import { BarLoader } from "react-spinners";
 import { TransactionTable } from "../_components/transaction-table";
 import { notFound } from "next/navigation";
+import { AccountChart } from "../_components/account-chart";
 
 interface AccountPageProps {
   params: {
@@ -33,7 +34,7 @@ export default async function AccountPage({ params }: AccountPageProps) {
     <div className="space-y-8 px-5">
       <div className="flex gap-4 items-end justify-between">
         <div>
-          <h1 className="text-5xl sm:text-6xl font-bold tracking-tight gradient-title capitalize">
+          <h1 className="text-5xl sm:text-6xl font-bold tracking-tighter text-transparent bg-clip-text bg-gradient-to-br from-blue-600 to-purple-600 capitalize">
             {account.name}
           </h1>
           <p className="text-muted-foreground">
@@ -52,7 +53,11 @@ export default async function AccountPage({ params }: AccountPageProps) {
       </div>
 
       {/* Chart Section */}
-      
+      <Suspense
+        fallback={<BarLoader className="mt-4" width={"100%"} color="#9333ea" />}
+      >
+        <AccountChart transactions={transactions} />
+      </Suspense>
 
       {/* Transactions Table */}
       <Suspense fallback={<BarLoader className="mt-4" width={"100%"} color="#9333ea" />}>
