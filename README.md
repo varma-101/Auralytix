@@ -1,6 +1,7 @@
 # 📊 Auralytix – Personal Finance Analytics Dashboard
 
 **Auralytix** is a modern finance analytics web application that helps users track and understand their financial accounts and transactions using interactive visualizations and a clean, responsive UI.
+https://auralytics-sand.vercel.app/
 
 ---
 
