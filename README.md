@@ -12,7 +12,7 @@ https://auralytics-sand.vercel.app/
 - 📊 **Transaction Analytics** – Bar charts and tables of historical transactions
 - 🧾 **Detailed Transaction Table** – Filtered, paginated, and categorized views
 - 📅 **Date-Based Insights** – Track financial trends over time
-- ⚡ **Fast & Responsive UI** – Smooth user experience across devices
+- ⚡ **Fast & Responsive UI** – Smooth user experience across all devices
 
 ---
 
